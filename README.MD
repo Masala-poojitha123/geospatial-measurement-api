@@ -1,19 +1,15 @@
 # Geospatial File Measurement API
 
+FastAPI based API for KML and Shapefile ZIP measurements in meters.
+
 ## Run
-pip install -r app/requirements.txt
+pip install -r requirements.txt
 uvicorn app.main:app --reload
 
 ## APIs
-- POST /api/files/ - upload KML or ZIP
-- GET /api/files/{id}
-- GET /api/files/{id}/measurements/
+- POST /upload - Upload KML/ZIP
+- GET /files - List files
+- GET /measurements/{file_id} - Get area/length in meters
 
-## CRS Handling
-Files EPSG:4326 lo untayi, degrees lo area wrong vastundi. So centroid tho UTM zone kanukoni reproject chesi meters lo calculate chesa.
-
-## Learnings
-UTM auto-detection, GeoPandas KML parsing
-
-## Future
-PostGIS, Celery, GeoJSON support
+## Resume
+Add your resume drive link here later
